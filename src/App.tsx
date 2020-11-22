@@ -13,7 +13,7 @@ function App() {
   const usersError = useSelector(usersErrorSelector);
   useEffect(() => {
     dispatch(getUsers());
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     if (usersError) alert(usersError); //Hopefully not in scope to have a Notification system here :)
